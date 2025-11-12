@@ -16,7 +16,7 @@ Open multiple browser windows to `http://localhost:3000/?room=yourroom` to test 
 ## New/Bonus features included
 - Rooms support (multiple isolated canvases)
 - Mobile/touch support (pointer events)
-- Rectangle tool + Pen + Eraser
+- Rectangle tool + Pen + Eraser + Circle + Line
 - Per-user cursor indicators (shows other users' cursors)
 - Persistence: server saves sessions per room to `server/sessions/<room>.json`
 - FPS counter and ping latency display
