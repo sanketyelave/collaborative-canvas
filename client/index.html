@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>CollabCanvas — real-time</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div id="topbar">
+    <div id="brand">CollabCanvas</div>
+
+    <div id="room-group">
+      <input id="room" placeholder="Create/join room-click join" />
+      <input id="username" placeholder="Your name-click join" />
+      <button id="join">Join</button>
+      <button id="share" title="Copy room link">Share</button>
+    </div>
+
+    <div id="meta">
+      <span id="status">Not connected</span>
+      <span id="userList">0 users</span>
+      <span id="fps">0 FPS</span>
+      <span id="latency">— ms</span>
+    </div>
+  </div>
+
+  <div id="toolbar">
+    <div class="group">
+      <select id="tool" title="Tool">
+        <option value="pen">Pen</option>
+        <option value="line">Straight line</option>
+        <option value="rect">Rectangle</option>
+        <option value="circle">Circle</option>
+        <option value="eraser">Eraser</option>
+      </select>
+
+      <input id="color" type="color" value="#0b5fff" title="Color" />
+      <input id="width" type="range" min="1" max="40" value="4" title="Stroke width" />
+    </div>
+
+    <div class="group">
+      <button id="undo">Undo</button>
+      <button id="redo">Redo</button>
+      <button id="download">Download PNG</button>
+      <button id="save">Save</button>
+      <button id="load">Load</button>
+      <button id="clear">Clear</button>
+    </div>
+  </div>
+
+  <div id="canvas-wrap">
+    <canvas id="canvas"></canvas>
+    <div id="cursors"></div>
+  </div>
+
+  <div id="toast" class="hidden"></div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/canvas.js"></script>
+  <script src="/websocket.js"></script>
+  <script src="/main.js"></script>
+</body>
+
+</html>
