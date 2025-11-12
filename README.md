@@ -1,7 +1,12 @@
 # Collaborative Canvas - Demo (Enhanced)
 This project demonstrates a collaborative drawing app (vanilla JS + Node.js + Socket.io).
 
+🌐 **Live Demo:** [https://collaborative-canvas-endl.onrender.com/](https://collaborative-canvas-endl.onrender.com/)
+
+---
+
 ## How to run
+
 ```
 npm install
 npm start
@@ -19,7 +24,6 @@ Open multiple browser windows to `http://localhost:3000/?room=yourroom` to test 
 - Save/Load session buttons (server-side persistence)
 
 ## Known limitations
-- Global undo is still naive: removes stroke by id globally.
 - Conflict resolution is still draw-order based.
 - Persistence is file-based (not a DB) and synchronous for simplicity.
 - Not optimized for >1000 concurrent users (would need batching, compression, and sharding).
